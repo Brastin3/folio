@@ -7,10 +7,9 @@ var s_logo;
 var mode = 1;
 var bg;
 var darkmode = false;
-
+var pg;
 var canvaswidth = 100;
 var canvassheight =100;
-var scale = 1;
 
 var shapes = [];
 function preload(){
@@ -30,10 +29,10 @@ function setup(){
   xs=4;
   ys=4;
   bg=color(33, 111, 237);
-  for(var i = 0;i<200;i++){
+  for(var i = 0;i<20;i++){
     shapes.push(new Shape(i));
   }
-
+  pg = createGraphics(width/20, height/20);
   document.body.style.overflow_x = 'hidden';
   //pg.colorMode(HSB,255,255,255,1);
   //colorMode(HSB,255,255,255,1);
@@ -42,7 +41,8 @@ function setup(){
 function draw(){
   
   if(mode==1){
-
+    pg.background(0);
+    pg.background(255,0,5);
     background(0);
 
     if(y<0||y+175>height){
@@ -67,13 +67,13 @@ function draw(){
   }
 
   for(var i = 0;i<shapes.length;i++){
-    shapes[i].show();
+    shapes[i].show(pg);
     //console.log("dingding");
   }
   //text("yeet",200,500);
   //filter(BLUR,10);
- //pg.filter(BLUR,4);
-  //image(pg, 0, 0,windowWidth,windowHeight);
+  pg.filter(BLUR,4);
+  image(pg, 0, 0,windowWidth,windowHeight);
   
 }
 
@@ -121,14 +121,14 @@ class Shape {
   x = random(0,width/20);
   y = random(0,height/20);
   time = random(0,60);
-  size = 200;
+  size = 20;
   c = 255;
   state = 0;
   xspeed = random(-0.1,0.1);;
   yspeed = random(-0.1,0.1);;
   border = 20;
 
-
+  
   constructor( index){
     colorMode(HSB,255,255,255);
     
@@ -136,14 +136,14 @@ class Shape {
     //this.c=color(255,255,128+(128/10)*index,255,255);
   }
 
-  show(){
-    colorMode(HSB,255,255);
+  show(graphics){
+    pg.colorMode(HSB,255,255);
     this.time+=0.2;
-    noStroke();
+    graphics.noStroke();
     //graphics.stroke(255);
-    fill(this.c);
+    pg.fill(this.c);
     //graphics.fill(255,0,255);
-    ellipse(this.x,this.y,this.size,this.size);
+    pg.ellipse(this.x,this.y,this.size,this.size);
     this.x+=this.xspeed;
     this.y+=this.yspeed;
     if(this.time>60){
@@ -153,17 +153,17 @@ class Shape {
       this.yspeed = random(-0.1,0.1);
       //this.c = color(random(0,360),255,255);
     }
-    if(this.x>width+this.border){
+    if(this.x>width/20+this.border){
       this.x=-this.border;
     }
-    if(this.y>height+this.border){
+    if(this.y>height/20+this.border){
       this.y=-this.border;
     }
     if(this.x<-this.border){
-      this.x=width+this.border;
+      this.x=width/20+this.border;
     }
     if(this.y<-this.border){
-      this.y=height+this.border;
+      this.y=height/20+this.border;
     }
   }
 }
