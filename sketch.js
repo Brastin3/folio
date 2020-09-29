@@ -19,8 +19,8 @@ function preload(){
 function setup(){
   
   canvas = createCanvas(windowWidth,windowHeight);
-  canvas.position(0,0);
-  canvas.style("z-index","-1");
+  //.position(0,0);
+  //canvas.style("z-index","-1");
   //canvas.elt.style.position = "fixed"
   x=width/2;
   y=height/2;
