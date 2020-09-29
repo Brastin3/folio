@@ -1,0 +1,154 @@
+
+.card {
+  background-color:white;
+  color:#216fed;
+  border-radius:5px;
+  padding:10px;
+  width:250px;
+  display:inline-block;
+  margin-right:10px;
+  box-shadow: 0px 0px 18px #1b58ba;
+  text-decoration:none;
+  padding-bottom:0px;
+  margin-bottom:10px;
+}
+
+.card img {
+  width:100%;
+  padding-bottom:0px;
+}
+
+.card p {
+  margin-top:9px;
+  padding-top:0px;
+}
+
+a:link {
+
+  text-decoration:none;
+}
+
+a{
+  color:#216fed;
+}
+#dmbtn {
+  float:right;
+  display:inline-block;
+  margin-right:10px;
+}
+button{
+  padding:10px;
+  border-radius:5px;
+  border-style:hidden;
+  background-color:#216fed;
+  color:white;
+  font-weight:bold;
+}
+button:hover{
+  background-color:white;
+  color:#216fed;
+}
+
+body.light-mode {
+  font-family: 'Roboto', sans-serif;
+  color:white;
+  padding-left:20px;
+  padding-right:20px;
+}
+body.dark-mode {
+  font-family: 'Roboto', sans-serif;
+  color:#216fed;
+  padding-left:20px;
+  padding-right:20px;
+
+}
+
+body.dark-mode button{
+  background-color:rgb(33, 39, 48);
+  color:rgb(33, 111, 237);
+}
+body.dark-mode button:hover{
+  background-color:rgb(33, 111, 237);
+  color:rgb(33, 39, 48);
+}
+body.dark-mode .card{
+  background-color:rgb(33, 111, 237);
+  color:rgb(33, 39, 48);
+  box-shadow: 0px 0px 18px #1d1e21
+}
+body.dark-mode a{
+  color:white;
+}
+
+@media only screen and (max-width: 600px) {
+  .card{
+    width:100%;
+  }
+  .card img{
+    display:none;
+  }
+  body {
+    padding:0px;
+    width:80%;
+    padding: 0 auto;
+  }
+
+
+
+
+}
+body{
+  background:0;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+#body{
+  margin:0;
+  padding:0;  
+  
+}
+.widthslice {
+  background-color:#1d1e21;
+  background-color:#111;
+  /*width:100%;*/
+  margin:0;
+  padding:10px 20%;
+  color:#ccc;
+  
+}
+
+.transparent{
+  background:none;
+  color:#fff;
+}
+
+canvas {
+  width:100%;
+  height:100%;
+
+  position: fixed;
+}
+img{
+  width:40%;
+ 
+}
+
+.right{
+  float:right;
+}
+
+.left{
+  float:left;
+}
+
+.inline{
+  display:flex;
+}
+
+.button {
+  background-color:#fff;
+  margin-right:20px;
+  padding:10px 20px;
+  border-radius:5px;
+  font-weight:bold;
+  color:#444;
+}
