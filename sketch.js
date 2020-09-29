@@ -13,10 +13,8 @@ var canvassheight =100;
 
 var shapes = [];
 function preload(){
-  s_logo=loadImage("cool/dvd.png");
+
 }
-
-
 
 function setup(){
   
@@ -33,9 +31,7 @@ function setup(){
     shapes.push(new Shape(i));
   }
   pg = createGraphics(width/20, height/20);
-  document.body.style.overflow_x = 'hidden';
-  //pg.colorMode(HSB,255,255,255,1);
-  //colorMode(HSB,255,255,255,1);
+  //document.body.style.overflow_x = 'hidden';
 }
 
 function draw(){
