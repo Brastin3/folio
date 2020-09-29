@@ -98,7 +98,7 @@ body.dark-mode a{
 
 }
 body{
-  background-color:0;
+  background-color:#111;
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 #body{
@@ -111,14 +111,42 @@ body{
   background-color:#111;
   /*width:100%;*/
   margin:0;
-  padding:10px 20%;
-  color:#ccc;
+  padding:30px 20%;
+  color:rgba(255, 255, 255, 0.5);
+ 
   
+}
+
+.tinyslice{
+  background-color:#1d1e21;
+  background-color:#111;
+  /*width:100%;*/
+  margin:0;
+  padding:10px 20%;
+  color:rgba(255, 255, 255, 0.5);
+}
+
+.flexcontainer {
+  display:flex;
 }
 
 .transparent{
   background:none;
+  color:rgba(255, 255, 255, 0.719);
+}
+
+.dark{
+  background-color:rgba(0, 0, 0, 0.692);
+}
+.darker{
+  background-color:rgba(0, 0, 0, 0.863);
+}
+h1{
   color:#fff;
+}
+.sticky{
+  position: sticky;
+  top:0;
 }
 
 canvas {
@@ -127,10 +155,10 @@ canvas {
 
 }
 img{
-  width:40%;
- 
+  width:100%;
+  margin-bottom:20px;
+  margin-top:20px;
 }
-
 .right{
   float:right;
 }
@@ -144,10 +172,17 @@ img{
 }
 
 .button {
-  background-color:#fff;
+  background-color:rgb(255, 255, 255,0.2);
   margin-right:20px;
   padding:10px 20px;
   border-radius:5px;
   font-weight:bold;
-  color:#444;
+  color:#fff;
+}
+.button:hover{
+  background-color:rgb(255, 255, 255,0.4);
+}
+
+.description{
+  padding-right:20px;
 }

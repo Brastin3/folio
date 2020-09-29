@@ -19,9 +19,9 @@ function preload(){
 function setup(){
   
   canvas = createCanvas(windowWidth,windowHeight);
-  //.position(0,0);
-  //canvas.style("z-index","-1");
-  //canvas.elt.style.position = "fixed"
+  canvas.position(0,0);
+  canvas.style("z-index","-1");
+  canvas.elt.style.position = "fixed"
   x=width/2;
   y=height/2;
   xs=4;
@@ -31,14 +31,17 @@ function setup(){
     shapes.push(new Shape(i));
   }
   pg = createGraphics(width/20, height/20);
-  //document.body.style.overflow_x = 'hidden';
+  document.body.style.overflow_x = 'hidden';
 }
 
 function draw(){
   
   if(mode==1){
     pg.background(0);
-    pg.background(255,0,5);
+    pg.colorMode(RGB);
+    pg.background(24, 32, 51);
+    pg.colorMode(HSB);
+    
     background(0);
 
     if(y<0||y+175>height){
@@ -69,7 +72,7 @@ function draw(){
   //text("yeet",200,500);
   //filter(BLUR,10);
   pg.filter(BLUR,4);
-  image(pg, 0, 0,windowWidth,windowHeight);
+  image(pg, 0, 0,width,height+20);
   
 }
 
