@@ -35,7 +35,7 @@ function setup(){
 }
 
 function draw(){
-  
+  observer.observe(document.querySelector('nav'));
   if(mode==1){
     pg.background(0);
     pg.colorMode(RGB);
@@ -166,3 +166,9 @@ class Shape {
     }
   }
 }
+
+const observer = new IntersectionObserver( 
+  ([e]) => e.target.toggleAttribute('stuck', e.intersectionRatio < 1),
+  {threshold: [1]}
+);
+
