@@ -1,4 +1,10 @@
 
+
+
+@font-face {
+  font-family: "metropolisbold";
+  src: url("Metropolis-Bold.ttf");
+}
 .card {
   background-color:white;
   color:#216fed;
@@ -144,6 +150,8 @@ body{
 }
 h1{
   color:#fff;
+  font-family:"metropolisbold";
+  font-weight:normal;
 }
 .sticky{
   position: sticky;
@@ -193,7 +201,7 @@ img{
 }
 
 .button {
-  background-color:rgb(255, 255, 255,0.2);
+  background-color:rgba(255, 255, 255, 0.103);
   margin-right:20px;
   padding:10px 20px;
   border-radius:5px;
