@@ -8,13 +8,16 @@ var canvassheight =100;
 
 var shapes = [];
 
+var blobsize = 20;
+var blobcount = 20;
+
 function setup(){
   canvas = createCanvas(windowWidth,windowHeight);
   canvas.position(0,0);
   canvas.style("z-index","-1");
   canvas.elt.style.position = "fixed"
   bg=color(33, 111, 237);
-  for(var i = 0;i<20;i++){
+  for(var i = 0;i<blobcount;i++){
     shapes.push(new Shape(i));
   }
   pg = createGraphics(width/20, height/20);
@@ -42,7 +45,7 @@ function windowResized(){
   resizeCanvas(windowWidth,windowHeight);
 }
 //does this work
-
+//does this work please work aaa
 
 function toggleDarkLight() {
   var body = document.getElementById('body');
@@ -62,7 +65,7 @@ class Shape {
   x = random(0,width/20);
   y = random(0,height/20);
   time = random(0,60);
-  size = 20;
+  size = blobsize;
   c = 255;
   state = 0;
   xspeed = random(-0.1,0.1);;
@@ -72,7 +75,7 @@ class Shape {
   
   constructor(index){
     colorMode(HSB,255,255,255);
-    this.c=color(128+(128/20)*index,255,255,0.5);
+    this.c=color(128+(128/blobcount)*index,255,255,0.5);
   }
 
   show(){
