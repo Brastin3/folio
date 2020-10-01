@@ -14,23 +14,23 @@ function setup(){
   for(var i = 0;i<blobcount;i++){
     shapes.push(new Shape(i));
   }
-  pg = createGraphics(windowWidth/20, windowHeight/20);
+  //pg = createGraphics(windowWidth/20, windowHeight/20);
   //document.body.style.overflow_x = 'hidden';
 }
 
 function draw(){
   observer.observe(document.querySelector('nav'));
-  pg.background(0);
-  pg.colorMode(RGB);
-  pg.background(24, 32, 51);
-  pg.colorMode(HSB);
-  background(0);
+  //pg.background(0);
+  //pg.colorMode(RGB);
+  //pg.background(24, 32, 51);
+  //pg.colorMode(HSB);
+  background(255);
 
   for(var i = 0;i<shapes.length;i++){
-    shapes[i].show(pg);
+    shapes[i].show();
   }
-  pg.filter(BLUR,4);
-  image(pg, 0, 0,windowWidth,height+20);
+  //pg.filter(BLUR,4);
+  //image(pg, 0, 0,windowWidth,height+20);
   
 }
 
@@ -54,15 +54,14 @@ class Shape {
   }
 
   show(){
-    pg.colorMode(HSB,255,255);
+    //pg.colorMode(HSB,255,255);
     this.time+=0.2;
-    pg.noStroke();
-    pg.fill(this.c);
-    pg.ellipse(this.x,this.y,this.size,this.size);
+    //pg.noStroke();
+    //pg.fill(this.c);
+    //pg.ellipse(this.x,this.y,this.size,this.size);
     this.x+=this.xspeed;
     this.y+=this.yspeed;
     if(this.time>60){
-   
       this.time=0;
       this.xspeed = random(-0.1,0.1);
       this.yspeed = random(-0.1,0.1);
