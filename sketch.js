@@ -7,15 +7,15 @@ var blobcount = 20;
 
 function setup(){
   canvas = createCanvas(windowWidth,windowHeight);
-  //canvas.position(0,0);
-  //canvas.style("z-index","-1");
-  //canvas.elt.style.position = "fixed"
+  canvas.position(0,0);
+  canvas.style("z-index","-1");
+  canvas.elt.style.position = "fixed"
   
   pg = createGraphics(int(windowWidth/20), int(windowHeight/20));
   for(var i = 0;i<blobcount;i++){
     shapes.push(new Shape(i));
   }
-  //document.body.style.overflow_x = 'hidden';
+  document.body.style.overflow_x = 'hidden';
 
   
 }
@@ -32,10 +32,10 @@ function draw(){
     shapes[i].show();
   }
 
-  //pg.filter(BLUR,4);
-  image(pg, 0, 0,windowWidth-20,windowHeight-20);
+  pg.filter(BLUR,4);
+  image(pg, 0, 0,windowWidth,windowHeight);
   fill(255);
-  text(windowWidth+", "+windowHeight+", "+canvas.width+", "+canvas.height+", "+pg.width+", "+pg.height,50,50)
+  //text(windowWidth+", "+windowHeight+", "+canvas.width+", "+canvas.height+", "+pg.width+", "+pg.height,50,50)
 }
 
 function windowResized(){
