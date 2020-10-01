@@ -14,7 +14,7 @@ function setup(){
   for(var i = 0;i<blobcount;i++){
     shapes.push(new Shape(i));
   }
-  pg = createGraphics(width/20, height/20);
+  pg = createGraphics(windowWidth/20, windowHeight/20);
   //document.body.style.overflow_x = 'hidden';
 }
 
@@ -30,7 +30,7 @@ function draw(){
     shapes[i].show(pg);
   }
   pg.filter(BLUR,4);
-  image(pg, 0, 0,width,height+20);
+  image(pg, 0, 0,windowWidth,height+20);
   
 }
 
@@ -41,8 +41,8 @@ function windowResized(){
 class Shape {
   constructor(index){
     colorMode(HSB,255,255,255);
-    this.x = random(0,width/20);
-    this.y = random(0,height/20);
+    this.x = random(0,windowWidth/20);
+    this.y = random(0,windowHeight/20);
     this.time = random(0,60);
     this.size = blobsize;
     this.c = 255;
@@ -67,17 +67,17 @@ class Shape {
       this.xspeed = random(-0.1,0.1);
       this.yspeed = random(-0.1,0.1);
     }
-    if(this.x>width/20+this.border){
+    if(this.x>windowWidth/20+this.border){
       this.x=-this.border;
     }
-    if(this.y>height/20+this.border){
+    if(this.y>windowHeight/20+this.border){
       this.y=-this.border;
     }
     if(this.x<-this.border){
-      this.x=width/20+this.border;
+      this.x=windowWidth/20+this.border;
     }
     if(this.y<-this.border){
-      this.y=height/20+this.border;
+      this.y=windowHeight/20+this.border;
     }
   }
 }
