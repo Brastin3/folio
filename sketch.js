@@ -11,7 +11,7 @@ function setup(){
   //canvas.style("z-index","-1");
   //canvas.elt.style.position = "fixed"
   
-  pg = createGraphics(windowWidth/20, windowHeight/20);
+  pg = createGraphics(int(windowWidth/20), int(windowHeight/20));
   for(var i = 0;i<blobcount;i++){
     shapes.push(new Shape(i));
   }
@@ -31,9 +31,11 @@ function draw(){
   for(var i = 0;i<shapes.length;i++){
     shapes[i].show();
   }
+
   //pg.filter(BLUR,4);
   image(pg, 0, 0,windowWidth-20,windowHeight-20);
-  
+  fill(255);
+  text(windowWidth+", "+windowHeight+", "+canvas.width+", "+canvas.height+", "+pg.width+", "+pg.height,50,50)
 }
 
 function windowResized(){
