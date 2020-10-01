@@ -29,10 +29,10 @@ function draw(){
   background(255);
 
   for(var i = 0;i<shapes.length;i++){
-    //shapes[i].show();
+    shapes[i].show();
   }
-  pg.filter(BLUR,4);
-  image(pg, 0, 0,windowWidth,windowHeight+20);
+  //pg.filter(BLUR,4);
+  image(pg, 0, 0,windowWidth-20,windowHeight-20);
   
 }
 
