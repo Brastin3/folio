@@ -31,7 +31,7 @@ function draw(){
     shapes[i].show();
   }
   pg.filter(BLUR,4);
-  image(pg, 0, 0,windowWidth,height+20);
+  image(pg, 0, 0,windowWidth,windowHeight+20);
   
 }
 
