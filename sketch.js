@@ -15,6 +15,8 @@ function setup(){
   //}
   //pg = createGraphics(windowWidth/20, windowHeight/20);
   //document.body.style.overflow_x = 'hidden';
+
+  //colorMode(HSB,255,255,255);
 }
 
 function draw(){
@@ -39,7 +41,7 @@ function windowResized(){
 
 class Shape {
   constructor(index){
-    colorMode(HSB,255,255,255);
+    
     this.x = random(0,windowWidth/20);
     this.y = random(0,windowHeight/20);
     this.time = random(0,60);
