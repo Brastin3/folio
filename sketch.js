@@ -10,10 +10,11 @@ function setup(){
   //canvas.position(0,0);
   //canvas.style("z-index","-1");
   //canvas.elt.style.position = "fixed"
+  
+  pg = createGraphics(windowWidth/20, windowHeight/20);
   for(var i = 0;i<blobcount;i++){
     shapes.push(new Shape(i));
   }
-  pg = createGraphics(windowWidth/20, windowHeight/20);
   //document.body.style.overflow_x = 'hidden';
 
   
