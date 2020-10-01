@@ -10,10 +10,9 @@ function setup(){
   //canvas.position(0,0);
   //canvas.style("z-index","-1");
   //canvas.elt.style.position = "fixed"
-  bg=color(33, 111, 237);
-  for(var i = 0;i<blobcount;i++){
-    shapes.push(new Shape(i));
-  }
+  //for(var i = 0;i<blobcount;i++){
+  //  shapes.push(new Shape(i));
+  //}
   //pg = createGraphics(windowWidth/20, windowHeight/20);
   //document.body.style.overflow_x = 'hidden';
 }
@@ -26,9 +25,9 @@ function draw(){
   //pg.colorMode(HSB);
   background(255);
 
-  for(var i = 0;i<shapes.length;i++){
-    shapes[i].show();
-  }
+  //for(var i = 0;i<shapes.length;i++){
+  //  shapes[i].show();
+  //}
   //pg.filter(BLUR,4);
   //image(pg, 0, 0,windowWidth,height+20);
   
