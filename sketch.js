@@ -62,19 +62,20 @@ function toggleDarkLight() {
 
 
 class Shape {
-  x = random(0,width/20);
-  y = random(0,height/20);
-  time = random(0,60);
-  size = blobsize;
-  c = 255;
-  state = 0;
-  xspeed = random(-0.1,0.1);;
-  yspeed = random(-0.1,0.1);;
-  border = 20;
+  
 
   
   constructor(index){
     colorMode(HSB,255,255,255);
+    this.x = random(0,width/20);
+    this.y = random(0,height/20);
+    this.time = random(0,60);
+    this.size = blobsize;
+    this.c = 255;
+    this.state = 0;
+    this.xspeed = random(-0.1,0.1);;
+    this.yspeed = random(-0.1,0.1);;
+    this.border = 20;
     this.c=color(128+(128/blobcount)*index,255,255,0.5);
   }
 
