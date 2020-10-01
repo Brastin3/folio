@@ -20,7 +20,7 @@ function setup(){
 }
 
 function draw(){
-  observer.observe(document.querySelector('nav'));
+  //observer.observe(document.querySelector('nav'));
   //pg.background(0);
   //pg.colorMode(RGB);
   //pg.background(24, 32, 51);
@@ -82,8 +82,8 @@ class Shape {
   }
 }
 
-const observer = new IntersectionObserver( 
-  ([e]) => e.target.toggleAttribute('stuck', e.intersectionRatio < 1),
-  {threshold: [1]}
-);
+//const observer = new IntersectionObserver( 
+//  ([e]) => e.target.toggleAttribute('stuck', e.intersectionRatio < 1),
+//  {threshold: [1]}
+//);
 
